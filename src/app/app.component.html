@@ -1,0 +1,31 @@
+<app-loading></app-loading>
+<app-cursor-follower></app-cursor-follower>
+
+<div id="home" class="section">
+  <app-header></app-header>
+</div>
+<div id="products" class="section">
+  <app-products></app-products>
+</div>
+<div id="customize" class="section">
+  <app-customize-options></app-customize-options>
+</div>
+<div id="aboutUs" class="section">
+  <app-about-us></app-about-us>
+</div>
+<div id="contactUs" class="section">
+  <app-contact-us></app-contact-us>
+</div>
+<div id="footer" class="section">
+  <div id="moreInfo">
+    <app-categories></app-categories>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- Back to top button -->
+<button class="back-to-top" [class.show]="showBackToTop" (click)="scrollToTop()">
+  <mat-icon>keyboard_arrow_up</mat-icon>
+</button>
+
+<router-outlet></router-outlet>

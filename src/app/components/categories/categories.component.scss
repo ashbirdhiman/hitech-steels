@@ -1,0 +1,49 @@
+.categories-container {
+  padding: 3rem 0;
+  background-color: var(--background-color);
+  text-align: center;
+  
+  .heading {
+    margin-bottom: 2rem;
+    
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .indiamart-link {
+      display: inline-block;
+      color: var(--light-color);
+      background-color: var(--secondary-color);
+      padding: 10px 20px;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: var(--transition);
+      
+      &:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    padding: 2rem 1rem;
+    
+    .heading {
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .indiamart-link {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

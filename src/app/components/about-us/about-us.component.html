@@ -1,0 +1,31 @@
+<div class="about-us" id="aboutUs">
+  <h2 appAnimation animationType="fade-in">About Us</h2>
+  <img src="../../../assets/images/logo.jpg" alt="About Us Image" appAnimation animationType="zoom-in" />
+  <div class="container-fluid" appAnimation animationType="fade-in">
+    At Hi-Tech Steels, we take immense pride in our commitment to precision engineering and innovation in the steel industry.
+    With a rich history of delivering high-quality steel products and services, we have established ourselves as a leading player in the field.
+    Our state-of-the-art facilities, cutting-edge technology, and a dedicated team of experts enable us to consistently meet the evolving needs of our clients.
+    We understand that steel is at the core of many industries, and we are driven to provide the best solutions, meeting the highest standards of quality, performance, and sustainability.
+    As a company, we value our relationships with clients, suppliers, and partners, and we are constantly striving to push the boundaries of what is possible in the world of steel.
+    Our dedication to excellence and a forward-thinking approach make us your trusted partner in the steel industry.
+  </div>
+  
+  <div class="stats-container" appAnimation animationType="fade-in">
+    <div class="stat-card" appAnimation animationType="zoom-in" [delay]="0.2">
+      <div class="stat-value"><app-counter [startValue]="0" [endValue]="15" [duration]="2000"></app-counter>+</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-card" appAnimation animationType="zoom-in" [delay]="0.4">
+      <div class="stat-value"><app-counter [startValue]="0" [endValue]="500" [duration]="2000"></app-counter>+</div>
+      <div class="stat-label">Clients Worldwide</div>
+    </div>
+    <div class="stat-card" appAnimation animationType="zoom-in" [delay]="0.6">
+      <div class="stat-value"><app-counter [startValue]="0" [endValue]="1000" [duration]="2000"></app-counter>+</div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-card" appAnimation animationType="zoom-in" [delay]="0.8">
+      <div class="stat-value"><app-counter [startValue]="0" [endValue]="20" [duration]="2000"></app-counter>+</div>
+      <div class="stat-label">Industry Awards</div>
+    </div>
+  </div>
+</div>

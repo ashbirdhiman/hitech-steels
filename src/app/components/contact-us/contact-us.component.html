@@ -1,0 +1,113 @@
+<div class="contact-section" id="contactUs">
+  <div class="heading" appAnimation animationType="fade-in">
+    <h2>Contact Us</h2>
+  </div>
+  <br />
+  <div class="container">
+    <div class="contact-grid">
+      <div class="map-section" appAnimation animationType="slide-in-left">
+        <div class="heading">
+          <h2>Our location</h2>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184531.29432493483!2d-79.92435356014207!3d43.72506372928342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b15eaa5d05abf%3A0x352d31667cc38677!2sBrampton%2C%20ON!5e0!3m2!1sen!2sca!4v1698780529459!5m2!1sen!2sca"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="form-section" appAnimation animationType="slide-in-right">
+        <div class="enquiry-form">
+          <h2>Enquiry Form</h2>
+          <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                placeholder="Enter your name"
+              />
+              <div
+                class="error-message"
+                *ngIf="
+                  myForm.get('name')?.invalid && myForm.get('name')?.touched
+                "
+              >
+                Please enter your name
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                placeholder="Enter your email"
+              />
+              <div
+                class="error-message"
+                *ngIf="
+                  myForm.get('email')?.invalid && myForm.get('email')?.touched
+                "
+              >
+                Please enter a valid email address
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                formControlName="message"
+                placeholder="Enter your message"
+              ></textarea>
+              <div
+                class="error-message"
+                *ngIf="
+                  myForm.get('message')?.invalid &&
+                  myForm.get('message')?.touched
+                "
+              >
+                Please enter your message
+              </div>
+            </div>
+            <button
+              type="submit"
+              [disabled]="myForm.invalid"
+              class="submit-btn ripple-btn"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="contact-info-container" appAnimation animationType="fade-in">
+    <div class="contact-info-item">
+      <img src="assets/images/location.jpg" alt="Location" />
+      <h5>Brampton, Ontario, Canada</h5>
+    </div>
+    <div class="contact-info-item">
+      <img src="assets/images/email.png" alt="Email" />
+      <h5>histeelalloys&#64;gmail.com</h5>
+    </div>
+    <div class="contact-info-item">
+      <img src="assets/images/email.png" alt="Email" />
+      <h5>info&#64;histeelalloys.com</h5>
+    </div>
+    <div class="contact-info-item">
+      <img src="assets/images/call.png" alt="Phone" />
+      <h5>+1-(647)-937-5410</h5>
+    </div>
+    <div class="contact-info-item">
+      <img src="assets/images/timings.png" alt="Timings" />
+      <h5>9.00 to 17.00 hrs</h5>
+    </div>
+  </div>
+</div>

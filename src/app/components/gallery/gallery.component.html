@@ -1,0 +1,29 @@
+<div class="gallery-section">
+  <div class="heading">
+    <h2>Gallery</h2>
+  </div>
+  <div class="gallery-container">
+    <ngb-carousel [interval]="3000" [pauseOnHover]="true" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+      <ng-template ngbSlide>
+        <div class="carousel-image-container">
+          <img src="assets/images/banner4.jpg" alt="Slide 1">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-image-container">
+          <img src="assets/images/flat-bar.jpg" alt="Slide 2">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-image-container">
+          <img src="assets/images/square-bar.jpg" alt="Slide 3">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-image-container">
+          <img src="assets/images/round-bar.jpg" alt="Slide 4">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

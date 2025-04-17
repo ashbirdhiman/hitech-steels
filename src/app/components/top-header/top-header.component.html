@@ -1,0 +1,33 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/images/logo.jpg" alt="Logo" />
+  </div>
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <mat-icon>{{ isMenuVisible ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <div class="menu" [class.mobile_menu]="isMenuVisible">
+    <ul>
+      <li class="navbar-brand-font">
+        <a (click)="scrollToSection('home')" [class.active]="activeSection === 'home'">Home</a>
+      </li>
+      <li class="navbar-brand-font">
+        <a (click)="scrollToSection('products')" [class.active]="activeSection === 'products'">Products</a>
+      </li>
+      <li class="navbar-brand-font">
+        <a (click)="scrollToSection('customize')" [class.active]="activeSection === 'customize'">Customize Option</a>
+      </li>
+      <li class="navbar-brand-font">
+        <a (click)="scrollToSection('aboutUs')" [class.active]="activeSection === 'aboutUs'">About Us</a>
+      </li>
+      <li class="navbar-brand-font">
+        <a (click)="scrollToSection('contactUs')" [class.active]="activeSection === 'contactUs'">Contact Us</a>
+      </li>
+      <li class="navbar-brand-font">
+        <a (click)="scrollToSection('footer')" [class.active]="activeSection === 'footer'">More Info</a>
+      </li>
+      <li class="navbar-brand-font" *ngIf="isMenuVisible">
+        <a (click)="closeMenu()">Close Menu</a>
+      </li>
+    </ul>
+  </div>
+</header>
