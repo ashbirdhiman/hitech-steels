@@ -30,6 +30,7 @@ export default async function handler(req, res) {
       res.status(500).json({ error: "Error sending email" });
     }
   } else {
-    res.status(405).json(res + { error: "Method Not Allowed" }); // Only allow POST requests
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).end(`Method ${req.method} Not Allowed`); // Only allow POST requests
   }
 }
