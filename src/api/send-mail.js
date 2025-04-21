@@ -1,5 +1,5 @@
 // api/send-email.js
-import nodemailer from "nodemailer";
+const nodemailer = require("nodemailer"); // CommonJS require
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
@@ -30,6 +30,6 @@ export default async function handler(req, res) {
       res.status(500).json({ error: "Error sending email" });
     }
   } else {
-    res.status(405).json({ error: "Method Not Allowed" }); // Only allow POST requests
+    res.status(405).json(res + { error: "Method Not Allowed" }); // Only allow POST requests
   }
 }
