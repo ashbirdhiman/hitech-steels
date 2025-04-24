@@ -44,6 +44,7 @@ export class ContactUsComponent implements OnInit {
           this.loading = false; // Set loading to false
           this.successMessage =
             'Thank you for your message! We will get back to you soon.';
+           alert('✅ Message sent successfully!');  
           this.errorMessage = '';
           this.myForm.reset();
         },
