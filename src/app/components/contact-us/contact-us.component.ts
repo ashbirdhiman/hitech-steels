@@ -39,7 +39,7 @@ export class ContactUsComponent implements OnInit {
       const formData = this.myForm.value;
 
       // Send the form data to the serverless function
-      this.http.post('/api/send-email', formData).subscribe(
+      this.http.post('https://vercel-api-demo-omega.vercel.app/api/send-mai', formData).subscribe(
         (response: any) => {
           this.loading = false; // Set loading to false
           this.successMessage =
